@@ -1,0 +1,28 @@
+[package]
+name = "kimari"
+description = "Universal DSL for writing rules against the context in Rust."
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.68.0"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/siketyan/kimari.git"
+homepage = "https://github.com/siketyan/kimari"
+authors = [
+    "Natsuki Ikeguchi <me@s6n.jp>",
+]
+
+[dependencies]
+kimari-derive = { version = "=0.1.0", path = "./derive" }
+
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "1.0"
+
+[dev-dependencies]
+serde_yaml = "0.9.19"
+
+[workspace]
+members = [
+    ".",
+    "derive",
+]
